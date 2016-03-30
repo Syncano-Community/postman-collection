@@ -11,7 +11,7 @@ Select an option below:
 
 ## Environment Variables
 
-There is an example environment provided for you.  I would suggest making a duplicate, and renaming to your specific instance name.  Use this merely as a template for future instances.  This will allow you to switch between instances quickly.
+There is an example environment provided for you.  We suggest making a duplicate, and renaming to your specific instance name.  Use this merely as a template for future instances.  This will allow you to switch between instances quickly.
 
 | Key         | Value | Note |
 | ----------- | --- | --- |
@@ -28,3 +28,7 @@ If you would like to contribute to this repository - do the following:
 * Import the collection and environment into your local postman.
 * Make any changes to the collection
 * Commit and push your changes, then submit a PR.
+
+## Contributors
+* Kelly Andrews - [twitter](https://twitter.com/kellyjandrews), [github](https://github.com/kellyjandrews)
+* Sebastian Opałczyński - [github](https://github.com/opalczynski)
