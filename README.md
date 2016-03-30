@@ -9,48 +9,22 @@ Select an option below:
 * [Google store - Chrome Web Browser Plugin](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 * [Postman download page](https://www.getpostman.com/)
 
-## Main screen of the postman app.
+## Environment Variables
 
-* The most important button is the 'Import' - on the top left on the bar;
+There is an example environment provided for you.  I would suggest making a duplicate, and renaming to your specific instance name.  Use this merely as a template for future instances.  This will allow you to switch between instances quickly.
 
-![Main screen](images/howto/postman_main_screen.png)
+| Key         | Value | Note |
+| ----------- | --- | --- |
+| syncano-url | `https://api.syncano.io/v1.1/` | You shouldn't need to alter this unless you have a specific reason. |
+| instance-name | `<<YOUR INSTANCE NAME>>`  | Use the instance name you want to interact with.  |
+| user-key | `<<USER KEY>>` | You can create a test user in the dashboard, and open the details panel to get the user key. |
+| basic-api-key | `<<BASIC INSTANCE KEY>>` | This is an instance api key without any additional permissions.  |
+| userreg-api-key | `<<USER REG INSTANCE KEY>>` | This is an instance api key with the User Registration persmission granted. |
 
-## Import environments.
+## Contributing
+If you would like to contribute to this repository - do the following:
 
-* Click 'Import'.
-* Choose 'Import Folder' and navigate to the enironments/ in this repo.
-* Click 'Upload'
-* Done - you may have a feeling that nothing happens, but on the top right your envs should appers in the dropdown select.
-
-![Import environments](images/howto/postman_import_envs.png)
-
-## Import schema definitions.
-
-* Click 'Import'
-* Choose 'Import File' and navigate for the file: Syncano-API-V1.json.postman_collection in this repo under the definitions/
-* Click 'Upload'
-* Done - your schema should appear in the side panel
-
-![Import definitions](images/howto/postman_import_schema.png)
-
-## Updating the environments. You need to provide an api_key for your envs - default one is 'xxxx'
-
-* Click on the top left dropdown and pick 'Manage environments'
-* choose one of the env (or all of them - one by one) and click on them
-* in the value column with name api_key - provide your api_key
-* you can set here also 'instance' value for a valid instance; or overwrite them in the url directly on the request screen;
-
-![Import definitions](images/howto/postman_manage_envs.png)
-
-![Import definitions](images/howto/postman_api_key_set.png)
-
-## Use your calls! One to rule them all.
-
-* Choose right env: the one you just set up in the environment dropdown;
-* In the side panel choose an interesting request: "instance_list" for example:
-* Click 'Send' button :)
-* Done;
-
-![Import definitions](images/howto/postman_make_get_query.png)
-
-## Making POST, PUT, PATCH query is also simple: just go to the 'Body' tab and fill all needed parameters;
+* Fork this repository
+* Import the collection and environment into your local postman.
+* Make any changes to the collection
+* Commit and push your changes, then submit a PR.
