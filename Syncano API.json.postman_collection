@@ -1,0 +1,645 @@
+{
+	"id": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+	"name": "Syncano API",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "c3d07a14-fc2c-905b-7e96-586b428e6530",
+			"name": "Channels",
+			"description": "",
+			"order": [
+				"d58337fc-34cb-9e5a-5cb6-62bfab20dc60",
+				"759de35d-e9f0-47f1-0c25-39656618dde5",
+				"87434897-31de-c7db-0d06-f09298de3e1b"
+			],
+			"owner": "4898",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf"
+		},
+		{
+			"id": "51037baa-1fe3-0001-997a-e5e67deeb650",
+			"name": "Classes",
+			"description": "",
+			"order": [
+				"2c8e5fdb-3b54-4f35-4641-c780aac075c1",
+				"0cbd2784-f9b5-fb44-a840-dc43548a86f7"
+			],
+			"owner": "4898",
+			"requests": [],
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf"
+		},
+		{
+			"id": "68ba952d-6ac3-92f8-7935-138f9ad9786a",
+			"name": "Data Objects",
+			"description": "",
+			"order": [
+				"becf3ad8-05c6-a7f4-2176-9471bea7e827",
+				"6edb2255-5ac0-635d-f207-199ad2aca56d",
+				"f19c12f6-e224-8184-c0d4-2c6bd28c7ad3",
+				"dbd19742-36b5-1fa4-9268-429cc0bd072b",
+				"67c8aa03-a2e6-c114-2646-3269f5b83507"
+			],
+			"owner": "4898",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf"
+		},
+		{
+			"id": "a227adf9-7c41-b79a-80b5-1092735b86f4",
+			"name": "Groups",
+			"description": "",
+			"order": [
+				"36f09692-ce18-4276-eb0f-e5cfe41e1733",
+				"36a27dc1-3039-caa7-9202-cd603d2d502e",
+				"0b9d84aa-991b-91f7-d780-e1bc733c3346",
+				"b16caf55-d01d-f7be-64ed-9269a904e89f"
+			],
+			"owner": "4898",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf"
+		},
+		{
+			"id": "a176fc45-5b07-4d1d-ba6c-cd56c554e6d4",
+			"name": "Instances",
+			"description": "",
+			"order": [
+				"f02a65db-8b02-631e-bd1f-196c6595e4ee",
+				"7f749f62-814b-2776-abae-d9bc37561754"
+			],
+			"owner": "4898"
+		},
+		{
+			"id": "bfb851fd-0a0c-476b-c17c-615ddb151b5f",
+			"name": "User",
+			"description": "",
+			"order": [
+				"5f9e37ed-e9a2-1681-7b71-95c90d726df0",
+				"76d6310a-f12e-f1c6-21df-93421e69c50f",
+				"46819455-5cd2-d89c-8f97-7d0d0f36845f"
+			],
+			"owner": "4898",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf"
+		},
+		{
+			"id": "3d731dec-1765-88af-aa59-c4c0fd7d2852",
+			"name": "Users",
+			"description": "",
+			"order": [
+				"780309c7-fc49-0d2c-c3d1-81b37d5b4c1c",
+				"848113ec-1184-b780-d25e-690701204c3c",
+				"43c4eb97-6304-9bbf-7dcc-f2e3acaac2ab"
+			],
+			"owner": "4898"
+		}
+	],
+	"timestamp": 1459351468776,
+	"owner": "4898",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "0b9d84aa-991b-91f7-d780-e1bc733c3346",
+			"headers": "X-API-KEY: {{userreg-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/1/users/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "group",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459359228338,
+			"name": "List Users",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "0cbd2784-f9b5-fb44-a840-dc43548a86f7",
+			"headers": "X-API-KEY: {{basic-api-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/user_profile/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357543734,
+			"name": "Details",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "2c8e5fdb-3b54-4f35-4641-c780aac075c1",
+			"headers": "X-API-KEY: {{basic-api-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357541136,
+			"name": "List",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "36a27dc1-3039-caa7-9202-cd603d2d502e",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/1/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "group",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459359113666,
+			"name": "Details",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "36f09692-ce18-4276-eb0f-e5cfe41e1733",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/users/2/groups/1/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"data": [
+				{
+					"key": "group",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "List",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1459358627406,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "a227adf9-7c41-b79a-80b5-1092735b86f4"
+		},
+		{
+			"id": "43c4eb97-6304-9bbf-7dcc-f2e3acaac2ab",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/users/2/groups/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "group",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459358600124,
+			"name": "List Groups",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "46819455-5cd2-d89c-8f97-7d0d0f36845f",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/user/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "username",
+					"value": "test",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "test",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357571276,
+			"name": "Details",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "5f9e37ed-e9a2-1681-7b71-95c90d726df0",
+			"headers": "X-API-KEY: {{basic-api-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/user/auth/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "test",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "test",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357557414,
+			"name": "Log In",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "67c8aa03-a2e6-c114-2646-3269f5b83507",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/2/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357632992,
+			"name": "Delete",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "6edb2255-5ac0-635d-f207-199ad2aca56d",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/2/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "example",
+					"value": "example",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357623238,
+			"name": "Detail",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "759de35d-e9f0-47f1-0c25-39656618dde5",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/channels/test/history/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"data": [],
+			"dataMode": "raw",
+			"name": "History",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1459359611998,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c3d07a14-fc2c-905b-7e96-586b428e6530",
+			"rawModeData": "{\"payload\":\n    {\n        \"message\":\"Hello Witchers!\", \n        \"type\":\"welcome\"\n    }\n}"
+		},
+		{
+			"id": "76d6310a-f12e-f1c6-21df-93421e69c50f",
+			"headers": "X-API-KEY: {{basic-api-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/user/auth/google-oauth2/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "access_token",
+					"value": "<<GOOGLE OAUTH2 TOKEN>>",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357560969,
+			"name": "Social Log In",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "780309c7-fc49-0d2c-c3d1-81b37d5b4c1c",
+			"headers": "X-API-KEY: {{userreg-api-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/users/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "test2",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password@1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357851208,
+			"name": "Add",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "7f749f62-814b-2776-abae-d9bc37561754",
+			"headers": "X-API-KEY: {{basic-api-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357550428,
+			"name": "Details",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "848113ec-1184-b780-d25e-690701204c3c",
+			"headers": "X-API-KEY: {{userreg-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/users/1/reset_key/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"data": [
+				{
+					"key": "username",
+					"value": "test2",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password@1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Reset Key",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1459358073456,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "3d731dec-1765-88af-aa59-c4c0fd7d2852"
+		},
+		{
+			"id": "87434897-31de-c7db-0d06-f09298de3e1b",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/channels/test/publish/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Publish",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1459359593570,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c3d07a14-fc2c-905b-7e96-586b428e6530",
+			"rawModeData": "{\"payload\":\n    {\n        \"message\":\"Hello Witchers!\", \n        \"type\":\"welcome\"\n    }\n}"
+		},
+		{
+			"id": "b16caf55-d01d-f7be-64ed-9269a904e89f",
+			"headers": "X-API-KEY: {{userreg-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/1/users/2/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"data": [
+				{
+					"key": "group",
+					"value": "1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "Detail User",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1459359247149,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "a227adf9-7c41-b79a-80b5-1092735b86f4"
+		},
+		{
+			"id": "becf3ad8-05c6-a7f4-2176-9471bea7e827",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357620763,
+			"name": "List",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "d58337fc-34cb-9e5a-5cb6-62bfab20dc60",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/channels/test/poll/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"data": null,
+			"dataMode": "params",
+			"name": "Poll",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1459359488147,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c3d07a14-fc2c-905b-7e96-586b428e6530"
+		},
+		{
+			"id": "dbd19742-36b5-1fa4-9268-429cc0bd072b",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/2/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "PATCH",
+			"data": [
+				{
+					"key": "example",
+					"value": "example1",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357629652,
+			"name": "Update",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "f02a65db-8b02-631e-bd1f-196c6595e4ee",
+			"headers": "X-API-KEY: {{basic-api-key}}\n",
+			"url": "{{syncano-url}}/instances/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357546873,
+			"name": "List",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		},
+		{
+			"id": "f19c12f6-e224-8184-c0d4-2c6bd28c7ad3",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "example",
+					"value": "example",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459357626040,
+			"name": "Add",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
+		}
+	]
+}
