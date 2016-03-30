@@ -7,7 +7,7 @@
 		{
 			"id": "c3d07a14-fc2c-905b-7e96-586b428e6530",
 			"name": "Channels",
-			"description": "",
+			"description": "Channels are a way of providing realtime communication functionality in Syncano. Users can subscribe to Channels in order to get notifications about changes that happen to Data Objects connected to those Channels.\n\nDocumentation -  http://docs.syncano.io/docs/realtime-communication",
 			"order": [
 				"d58337fc-34cb-9e5a-5cb6-62bfab20dc60",
 				"759de35d-e9f0-47f1-0c25-39656618dde5",
@@ -19,7 +19,7 @@
 		{
 			"id": "51037baa-1fe3-0001-997a-e5e67deeb650",
 			"name": "Classes",
-			"description": "",
+			"description": "Classes are templates for data objects you will store in Syncano. In order to be able to add Data Objects, you have to define a Class for that type of data object.\n\nDocumentation - http://docs.syncano.io/docs/classes",
 			"order": [
 				"2c8e5fdb-3b54-4f35-4641-c780aac075c1",
 				"0cbd2784-f9b5-fb44-a840-dc43548a86f7"
@@ -31,7 +31,7 @@
 		{
 			"id": "68ba952d-6ac3-92f8-7935-138f9ad9786a",
 			"name": "Data Objects",
-			"description": "",
+			"description": "You can store data on Syncano using Data Objects.\nData Objects are similar to JSON objects, that contain key-value pairs defined by you on Class creation. All of them also have some default attributes defined by Syncano.\n\nDocumentation - http://docs.syncano.io/docs/data-objects",
 			"order": [
 				"becf3ad8-05c6-a7f4-2176-9471bea7e827",
 				"6edb2255-5ac0-635d-f207-199ad2aca56d",
@@ -45,7 +45,7 @@
 		{
 			"id": "a227adf9-7c41-b79a-80b5-1092735b86f4",
 			"name": "Groups",
-			"description": "",
+			"description": "Groups on Syncano are tightly coupled with permissions. They can be used to construct different levels of access to resources stored on the platform. After you create a group, you can add users to this group. Later on, during Data Object creation, you can decide which group of users will have access to it.\n\nDocumentation - http://docs.syncano.io/docs/groups",
 			"order": [
 				"36f09692-ce18-4276-eb0f-e5cfe41e1733",
 				"36a27dc1-3039-caa7-9202-cd603d2d502e",
@@ -58,17 +58,18 @@
 		{
 			"id": "a176fc45-5b07-4d1d-ba6c-cd56c554e6d4",
 			"name": "Instances",
-			"description": "",
+			"description": " You can think of instances as projects. When creating a new instance you are creating a new project in Syncano.\n \n Documentation - \n http://docs.syncano.io/docs/getting-started-with-syncano",
 			"order": [
 				"f02a65db-8b02-631e-bd1f-196c6595e4ee",
 				"7f749f62-814b-2776-abae-d9bc37561754"
 			],
-			"owner": "4898"
+			"owner": "4898",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf"
 		},
 		{
 			"id": "bfb851fd-0a0c-476b-c17c-615ddb151b5f",
 			"name": "User",
-			"description": "",
+			"description": "A user is the person that will interact with your applciation. ",
 			"order": [
 				"5f9e37ed-e9a2-1681-7b71-95c90d726df0",
 				"76d6310a-f12e-f1c6-21df-93421e69c50f",
@@ -80,26 +81,29 @@
 		{
 			"id": "3d731dec-1765-88af-aa59-c4c0fd7d2852",
 			"name": "Users",
-			"description": "",
+			"description": "A user is the person that will interact with your applciation. ",
 			"order": [
 				"780309c7-fc49-0d2c-c3d1-81b37d5b4c1c",
 				"848113ec-1184-b780-d25e-690701204c3c",
 				"43c4eb97-6304-9bbf-7dcc-f2e3acaac2ab"
 			],
-			"owner": "4898"
+			"owner": "4898",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf"
 		}
 	],
 	"timestamp": 1459351468776,
 	"owner": "4898",
-	"remoteLink": "",
+	"remoteLink": "https://www.getpostman.com/collections/700c0727c26520f21ab0",
 	"public": false,
 	"requests": [
 		{
 			"id": "0b9d84aa-991b-91f7-d780-e1bc733c3346",
 			"headers": "X-API-KEY: {{userreg-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/1/users/",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/:groupId/users/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"groupId": ""
+			},
 			"method": "GET",
 			"data": [
 				{
@@ -114,7 +118,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459359228338,
+			"time": 1459365881617,
 			"name": "List Users",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
@@ -123,9 +127,11 @@
 		{
 			"id": "0cbd2784-f9b5-fb44-a840-dc43548a86f7",
 			"headers": "X-API-KEY: {{basic-api-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/user_profile/",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/:className/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"className": ""
+			},
 			"method": "GET",
 			"data": null,
 			"dataMode": "params",
@@ -133,7 +139,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459357543734,
+			"time": 1459365800965,
 			"name": "Details",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
@@ -161,9 +167,11 @@
 		{
 			"id": "36a27dc1-3039-caa7-9202-cd603d2d502e",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/1/",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/:groupId/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"groupId": ""
+			},
 			"method": "GET",
 			"data": [
 				{
@@ -178,7 +186,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459359113666,
+			"time": 1459365873360,
 			"name": "Details",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
@@ -187,11 +195,10 @@
 		{
 			"id": "36f09692-ce18-4276-eb0f-e5cfe41e1733",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/users/2/groups/1/",
-			"pathVariables": {},
+			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/",
 			"preRequestScript": null,
+			"pathVariables": {},
 			"method": "GET",
-			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
 			"data": [
 				{
 					"key": "group",
@@ -201,23 +208,24 @@
 				}
 			],
 			"dataMode": "params",
-			"name": "List",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1459358627406,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "a227adf9-7c41-b79a-80b5-1092735b86f4"
+			"time": 1459365864956,
+			"name": "List",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
 		},
 		{
 			"id": "43c4eb97-6304-9bbf-7dcc-f2e3acaac2ab",
-			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/users/2/groups/",
+			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/users/:userId/groups/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"userId": ""
+			},
 			"method": "GET",
 			"data": [
 				{
@@ -232,7 +240,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459358600124,
+			"time": 1459365987941,
 			"name": "List Groups",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
@@ -305,9 +313,12 @@
 		{
 			"id": "67c8aa03-a2e6-c114-2646-3269f5b83507",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/2/",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/:className/objects/:objectId/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"className": "",
+				"objectId": ""
+			},
 			"method": "DELETE",
 			"data": [],
 			"dataMode": "params",
@@ -315,7 +326,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459357632992,
+			"time": 1459365563038,
 			"name": "Delete",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
@@ -324,9 +335,12 @@
 		{
 			"id": "6edb2255-5ac0-635d-f207-199ad2aca56d",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/2/",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/:className/objects/:objectId/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"className": "",
+				"objectId": ""
+			},
 			"method": "GET",
 			"data": [
 				{
@@ -341,7 +355,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459357623238,
+			"time": 1459365520807,
 			"name": "Detail",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
@@ -350,36 +364,38 @@
 		{
 			"id": "759de35d-e9f0-47f1-0c25-39656618dde5",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/channels/test/history/",
-			"pathVariables": {},
+			"url": "{{syncano-url}}/instances/{{instance-name}}/channels/:channelName//history/",
 			"preRequestScript": null,
+			"pathVariables": {
+				"channelName": ""
+			},
 			"method": "GET",
-			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
 			"data": [],
 			"dataMode": "raw",
-			"name": "History",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1459359611998,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "c3d07a14-fc2c-905b-7e96-586b428e6530",
+			"time": 1459365781143,
+			"name": "History",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": [],
 			"rawModeData": "{\"payload\":\n    {\n        \"message\":\"Hello Witchers!\", \n        \"type\":\"welcome\"\n    }\n}"
 		},
 		{
 			"id": "76d6310a-f12e-f1c6-21df-93421e69c50f",
 			"headers": "X-API-KEY: {{basic-api-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/user/auth/google-oauth2/",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/user/auth/:socialNetwork/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"socialNetwork": ""
+			},
 			"method": "POST",
 			"data": [
 				{
 					"key": "access_token",
-					"value": "<<GOOGLE OAUTH2 TOKEN>>",
+					"value": "<<SOCIAL AUTH TOKEN>>",
 					"type": "text",
 					"enabled": true
 				}
@@ -389,7 +405,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459357560969,
+			"time": 1459365931882,
 			"name": "Social Log In",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
@@ -449,11 +465,12 @@
 		{
 			"id": "848113ec-1184-b780-d25e-690701204c3c",
 			"headers": "X-API-KEY: {{userreg-api-key}}\nX-USER-KEY: {{user-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/users/1/reset_key/",
-			"pathVariables": {},
+			"url": "{{syncano-url}}/instances/{{instance-name}}/users/:userId/reset_key/",
 			"preRequestScript": null,
+			"pathVariables": {
+				"userId": ""
+			},
 			"method": "POST",
-			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
 			"data": [
 				{
 					"key": "username",
@@ -469,47 +486,48 @@
 				}
 			],
 			"dataMode": "params",
-			"name": "Reset Key",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1459358073456,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "3d731dec-1765-88af-aa59-c4c0fd7d2852"
+			"time": 1459365970661,
+			"name": "Reset Key",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
 		},
 		{
 			"id": "87434897-31de-c7db-0d06-f09298de3e1b",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/channels/test/publish/",
-			"pathVariables": {},
+			"url": "{{syncano-url}}/instances/{{instance-name}}/channels/:channelName//publish/",
 			"preRequestScript": null,
+			"pathVariables": {
+				"channelName": ""
+			},
 			"method": "POST",
-			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
 			"data": [],
 			"dataMode": "raw",
-			"name": "Publish",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1459359593570,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "c3d07a14-fc2c-905b-7e96-586b428e6530",
+			"time": 1459365786284,
+			"name": "Publish",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": [],
 			"rawModeData": "{\"payload\":\n    {\n        \"message\":\"Hello Witchers!\", \n        \"type\":\"welcome\"\n    }\n}"
 		},
 		{
 			"id": "b16caf55-d01d-f7be-64ed-9269a904e89f",
 			"headers": "X-API-KEY: {{userreg-api-key}}\nX-USER-KEY: 98f0800099277794732e1fdc9a10c9674ff141ea\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/1/users/2/",
-			"pathVariables": {},
+			"url": "{{syncano-url}}/instances/{{instance-name}}/groups/:groupId/users/:userId/",
 			"preRequestScript": null,
+			"pathVariables": {
+				"groupId": "",
+				"userId": ""
+			},
 			"method": "GET",
-			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
 			"data": [
 				{
 					"key": "group",
@@ -519,23 +537,24 @@
 				}
 			],
 			"dataMode": "params",
-			"name": "Detail User",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1459359247149,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "a227adf9-7c41-b79a-80b5-1092735b86f4"
+			"time": 1459365892439,
+			"name": "Detail User",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
 		},
 		{
 			"id": "becf3ad8-05c6-a7f4-2176-9471bea7e827",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/:className/objects/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"className": ""
+			},
 			"method": "GET",
 			"data": null,
 			"dataMode": "params",
@@ -543,7 +562,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459357620763,
+			"time": 1459365530089,
 			"name": "List",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
@@ -552,30 +571,33 @@
 		{
 			"id": "d58337fc-34cb-9e5a-5cb6-62bfab20dc60",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/channels/test/poll/",
-			"pathVariables": {},
+			"url": "{{syncano-url}}/instances/{{instance-name}}/channels/:channelName/poll/",
 			"preRequestScript": null,
+			"pathVariables": {
+				"channelName": ""
+			},
 			"method": "GET",
-			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
 			"data": null,
 			"dataMode": "params",
-			"name": "Poll",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1459359488147,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"folder": "c3d07a14-fc2c-905b-7e96-586b428e6530"
+			"time": 1459365775754,
+			"name": "Poll",
+			"description": "",
+			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
+			"responses": []
 		},
 		{
 			"id": "dbd19742-36b5-1fa4-9268-429cc0bd072b",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/2/",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/:className/objects/:objectId/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"className": "",
+				"objectId": ""
+			},
 			"method": "PATCH",
 			"data": [
 				{
@@ -590,7 +612,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459357629652,
+			"time": 1459365554736,
 			"name": "Update",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
@@ -618,9 +640,11 @@
 		{
 			"id": "f19c12f6-e224-8184-c0d4-2c6bd28c7ad3",
 			"headers": "X-API-KEY: {{basic-api-key}}\nX-USER-KEY: {{user-key}}\n",
-			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/example/objects/",
+			"url": "{{syncano-url}}/instances/{{instance-name}}/classes/:className/objects/",
 			"preRequestScript": null,
-			"pathVariables": {},
+			"pathVariables": {
+				"className": "test"
+			},
 			"method": "POST",
 			"data": [
 				{
@@ -635,7 +659,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1459357626040,
+			"time": 1459365825445,
 			"name": "Add",
 			"description": "",
 			"collectionId": "c1eda3df-e64a-c299-261c-6e8ef95156cf",
